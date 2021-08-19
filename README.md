@@ -14,8 +14,7 @@ See `scripts/requirements.txt`
 
 ## Dataset
 
-In `./dataset` is located the dataset generated using Flake/Failure rates over the past 35 commits, as in the study.
-
+Datasets are available at https://figshare.com/projects/Discerning_Legitimate_Failures_From_False_Alerts_A_Study_of_Chromium_s_Continuous_Integration/120852
 
 ## Scripts
 
@@ -99,28 +98,26 @@ Using `dataset.json`, train and fit a Random Forest Classifier.
 
 ### Run properties description
 
-{
-    "buildId": "LuCI build number (specific to builder)",
-    "command": "The command used to run the test",
-    "commandLength": "Number of characters present in the command artifact",
-    "crashlog": "Crash log resulting from an error",
-    "crashlogLength": "Number of characters present in the crashlog artifact",
-    "failureFlipRate": "Failure flip rate considering the previous n commits",
-    "failureRate": "Failure rate considering the previous n commits",
-    "flakeRate": "Flake rate considering the previous n commits",
-    "flakyFlipRate": "Flaky flip rate considering the previous n commits",
-    "label": "0 for a flaky failure (testStatus == 0 && runStatus != 2), 1 for a failure (testStatus == 3)",
-    "runDuration": "Time spent for this run execution",
-    "runStatus": "0: ABORT, 1: FAIL, 2: PASS, 3: CRASH, 4: SKIP",
-    "runTagStatus": "0: CRASH, 1: PASS, 2: FAIL, 3: TIMEOUT, 4: SUCCESS, 5: FAILURE, 6: FAILURE_ON_EXIT, 7: NOTRUN, 8: SKIP, 9: UNKNOWN",
-    "stackTrace": "Stack trace resulting from an error",
-    "stackTraceLength": "Number of characters present in the stackTrace artifact",
-    "stderr": "Stderr captured after the test execution",
-    "stderrLength": "Number of characters present in the stderr artifact",
-    "testId": "Unique identifier for a test",
-    "testSource": "Source code for the test",
-    "testSourceLength": "Number of characters present in the testSource artifact",
-    "testStatus": "0: FLAKY, 1: EXONERATED, 2: EXPECTED, 3: UNEXPECTED, 4: UNEXPECTEDLY_SKIPPED",
-    "testSuite": "Name of the test suite",
+    "buildId": "LuCI build number (specific to builder)",  
+    "command": "The command used to run the test",  
+    "commandLength": "Number of characters present in the command artifact",  
+    "crashlog": "Crash log resulting from an error",  
+    "crashlogLength": "Number of characters present in the crashlog artifact",  
+    "failureFlipRate": "Failure flip rate considering the previous n commits",  
+    "failureRate": "Failure rate considering the previous n commits",  
+    "flakeRate": "Flake rate considering the previous n commits",  
+    "flakyFlipRate": "Flaky flip rate considering the previous n commits",  
+    "label": "0 for a flaky failure (testStatus == 0 && runStatus != 2), 1 for a failure (testStatus == 3)",  
+    "runDuration": "Time spent for this run execution",  
+    "runStatus": "0: ABORT, 1: FAIL, 2: PASS, 3: CRASH, 4: SKIP",  
+    "runTagStatus": "0: CRASH, 1: PASS, 2: FAIL, 3: TIMEOUT, 4: SUCCESS, 5: FAILURE, 6: FAILURE_ON_EXIT, 7: NOTRUN, 8: SKIP, 9: UNKNOWN",  
+    "stackTrace": "Stack trace resulting from an error",  
+    "stackTraceLength": "Number of characters present in the stackTrace artifact",  
+    "stderr": "Stderr captured after the test execution",  
+    "stderrLength": "Number of characters present in the stderr artifact",  
+    "testId": "Unique identifier for a test",  
+    "testSource": "Source code for the test",  
+    "testSourceLength": "Number of characters present in the testSource artifact",  
+    "testStatus": "0: FLAKY, 1: EXONERATED, 2: EXPECTED, 3: UNEXPECTED, 4: UNEXPECTEDLY_SKIPPED",  
+    "testSuite": "Name of the test suite",  
     "testSuiteNumber": "Unique numerical identifier for the test suite"
-}
